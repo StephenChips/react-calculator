@@ -1,0 +1,14 @@
+html {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}

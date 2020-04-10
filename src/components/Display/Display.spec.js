@@ -6,10 +6,18 @@ describe('Display', function () {
     let wrapper;
 
     beforeEach(function () {
-        wrapper = shallow(<Display />);        
+        wrapper = shallow(<Display displayedValue={0}/>);        
     });
     
     it('renders a div', function () {
-        expect(wrapper.find('div').length).toBe(1);
+        expect(wrapper.find('div.display-container').length).toBe(1);
     });
+
+    it('renders displayed value', function () {
+        const displayedValue = 100;
+        wrapper.setProps({
+            displayedValue
+        });
+        expect(wrapper.text()).toBe(String(displayedValue));
+    })
 });

@@ -1,5 +1,11 @@
 import React from 'react'
 
-const Display = () => <div></div>;
+import './Display.css';
+
+const Display = ({ displayedValue }) => (
+    <div className="display-container">
+        <div className="display-value-container">{displayedValue}</div>
+    </div>
+);
 
 export default Display;
